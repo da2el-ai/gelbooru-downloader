@@ -22,7 +22,7 @@ Gelbooruから画像とタグをダウンロードし、機械学習用データ
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/yourusername/gelbooru-downloader.git
+git clone https://github.com/da2el-ai/gelbooru-downloader.git
 cd gelbooru-downloader
 
 # 仮想環境を作成（推奨）
