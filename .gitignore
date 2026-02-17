@@ -52,3 +52,5 @@ search.txt
 # OS
 .DS_Store
 Thumbs.db
+# AI Instructions
+AI_INSTRUCTION/

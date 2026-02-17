@@ -136,6 +136,9 @@ class GelbooruAPI:
     # limitを取得（指定がない場合は100）
     limit = int(params.get('limit', self.MAX_LIMIT_PER_REQUEST))
     
+    # 開始ページIDを取得（指定がない場合は0）
+    start_pid = int(params.get('pid', 0))
+    
     # ページネーションが必要かチェック
     if limit <= self.MAX_LIMIT_PER_REQUEST:
       # 単一リクエストで取得可能
@@ -146,14 +149,14 @@ class GelbooruAPI:
     all_posts = []
     total_pages = (limit + self.MAX_LIMIT_PER_REQUEST - 1) // self.MAX_LIMIT_PER_REQUEST
     
-    logger.info(f"ページネーション: {limit}件を{total_pages}ページに分割して取得します")
+    logger.info(f"ページネーション: {limit}件を{total_pages}ページに分割して取得します（開始pid={start_pid}）")
     
     for page in range(total_pages):
       page_params = params.copy()
       page_params['limit'] = str(self.MAX_LIMIT_PER_REQUEST)
-      page_params['pid'] = str(page)
+      page_params['pid'] = str(start_pid + page)
       
-      logger.debug(f"ページ {page + 1}/{total_pages} を取得中...")
+      logger.debug(f"ページ {page + 1}/{total_pages} (pid={start_pid + page}) を取得中...")
       
       try:
         posts = await self._fetch_page(page_params)
