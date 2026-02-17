@@ -1,0 +1,16 @@
+{
+  "api_key": "",
+  "user_id": "",
+  "display_all_site_content": true,
+  "output_dir": "./download",
+  "delay_ms": 1000,
+  "max_retries": 3,
+  "retry_delay": 1.0,
+  "default_exclude_tags": [
+    "comic",
+    "3d",
+    "photo",
+    "cosplay"
+  ],
+  "default_limit": 100
+}

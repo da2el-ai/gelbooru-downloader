@@ -1,0 +1,23 @@
+# Gelbooru検索クエリリスト
+# 1行1クエリ、URLクエリパラメータ形式
+# コメント行（#始まり）と空行は無視されます
+
+# 基本的な検索
+tags=blonde_hair
+
+# 除外タグ付き
+tags=blonde_hair+-cat_ears
+
+# 複数タグのAND検索
+tags=1girl+solo+blonde_hair&limit=50
+
+# rating指定
+tags=landscape+rating:safe&limit=200
+
+# 大量取得（自動的にページネーション）
+tags=scenery&limit=1000
+
+# 以下は例です。必要に応じて編集してください。
+# tags=blue_eyes+smile
+# tags=red_hair+ponytail
+# tags=fantasy+magic&limit=200
