@@ -41,16 +41,15 @@ pip install -e .
 pip install -e ".[dev]"
 ```
 
-## クイックスタート
+### APIキーとユーザーIDを記入
 
-### 1. 設定ファイルを作成
+`config.json`を作成します。
 
 ```bash
 gelbooru-dl --init-config
 ```
 
-`config.json`が作成されますのでAPI KeyとUser IDを記載してください。
-
+API KeyとUser IDを記入してください。<br>
 [Gelbooruの設定ページ](https://gelbooru.com/index.php?page=account&s=options) `API Access Credentials` から取得できます。<br>
 
 
@@ -67,6 +66,7 @@ gelbooru-dl --init-config
   ...
 ```
 
+## クイックスタート
 
 
 ### 2. 基本的な使い方
